@@ -537,7 +537,7 @@ class _EyenfingerOcrEngine(OcrEngine):
     def _findText(self, screenshot, text, match=None, preprocess=None, area=None, pagesegmodes=None):
         ssId = id(screenshot)
         self._assumeOcrResults(screenshot, preprocess, area, pagesegmodes)
-        
+
         for ppfilter in self._ss[ssId].words.keys():
             try:
                 score_text_bbox_list = eyenfinger.findText(
